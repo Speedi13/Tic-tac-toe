@@ -77,15 +77,15 @@ SMALL_RECT writeArea = {0,0,GameFieldSize.X-1,GameFieldSize.Y-1};
 void ResetGameField(CHAR_INFO* consoleBuffer)
 {
 	CONSOLE_SCREEN_BUFFER_INFO ScreenBufferInfo = {0};
-    DWORD written;
+	DWORD written;
 	GetConsoleScreenBufferInfo(hStdOutHandle, &ScreenBufferInfo);
-    FillConsoleOutputCharacterA( hStdOutHandle, ' ', (ScreenBufferInfo.dwSize.X * ScreenBufferInfo.dwSize.Y), characterPos, &written );
+	FillConsoleOutputCharacterA( hStdOutHandle, ' ', (ScreenBufferInfo.dwSize.X * ScreenBufferInfo.dwSize.Y), characterPos, &written );
 
 	for (int i = 0; i < GameFieldSize.X * GameFieldSize.Y; i++) 
 	{
-        consoleBuffer[i].Char.AsciiChar = GameField[i];
-        consoleBuffer[i].Attributes =  FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE;
-    }
+		consoleBuffer[i].Char.AsciiChar = GameField[i];
+		consoleBuffer[i].Attributes =  FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE;
+	}
 	WriteConsoleOutputA(hStdOutHandle, consoleBuffer, GameFieldSize, characterPos, &writeArea);
 
 	ZeroMemory( GameFieldTeams, 9 );
