@@ -69,7 +69,7 @@ void SetSymbol(CHAR_INFO* consoleBuffer, BYTE TeamId, int iFieldNumber )
 	}
 }
 
-COORD GameFieldSize = {GameFieldSize_Y,GameFieldSize_Y};
+COORD GameFieldSize = {GameFieldSize_X,GameFieldSize_Y};
 COORD characterPos = {0,0};
 SMALL_RECT writeArea = {0,0,GameFieldSize.X-1,GameFieldSize.Y-1}; 
 
