@@ -61,7 +61,7 @@ void SetSymbol(CHAR_INFO* consoleBuffer, BYTE TeamId, int iFieldNumber )
 	{
 		for (int iX = 0; iX < 3; iX++)
 		{
-			DWORD dwBufferOffset = (pField->dwStartRow+iX) + (pField->dwStartColumn+iY) * GameFieldSize_Y;
+			DWORD dwBufferOffset = (pField->dwStartRow+iX) + (pField->dwStartColumn+iY) * GameFieldSize_X;
 			consoleBuffer[ dwBufferOffset ].Char.AsciiChar = pSelectedSmybole[iSymbolLocation];
 			consoleBuffer[ dwBufferOffset ].Attributes = SelectedColor;
 			iSymbolLocation++;
