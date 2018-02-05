@@ -5,14 +5,14 @@
 int main( )
 {
 	hStdOutHandle = GetStdHandle(STD_OUTPUT_HANDLE);
-    hStdInHandle = GetStdHandle(STD_INPUT_HANDLE);
+	hStdInHandle = GetStdHandle(STD_INPUT_HANDLE);
 
 /*	//--------- To change the console windows size ---------
 	SMALL_RECT CmdWindowSize = {0, 0, 80-1, 22-1};
 	SetConsoleWindowInfo(hStdOutHandle, TRUE, &CmdWindowSize);
 
 	COORD CmdBufferSize = {80, 22};
-    SetConsoleScreenBufferSize(hStdOutHandle, CmdBufferSize);
+	SetConsoleScreenBufferSize(hStdOutHandle, CmdBufferSize);
 */
 	ResetGameField( consoleBuffer );
 
